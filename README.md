@@ -54,16 +54,16 @@ Write a C program to print the given triangular pattern using loop.
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int main()
-{
-    int i,j,n;
-    scanf("%d",&n);
-    for(i=n;i>=1;i--)
+#include <stdio.h>
+
+int main() {
+    int rows, i, j;
+    scanf("%d", &rows);
+    for (i = 1; i <= rows; i++)
     {
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= i; j++)
         {
-            printf("$");
+            printf("*");
         }
         printf("\n");
     }
@@ -73,7 +73,8 @@ int main()
 
 
 ## OUTPUT:
-![Screenshot 2025-04-28 140659](https://github.com/user-attachments/assets/3aa10ed9-adf9-4f1d-9318-8d098d514daf)
+![image](https://github.com/user-attachments/assets/029dbf0e-4b70-4450-8896-4a84134c0c9d)
+
 
 ## RESULT:
 
@@ -200,16 +201,19 @@ d.	After the loop, print the factorial value.
 ## PROGRAM:
 ```
 #include<stdio.h>
+void fact();
 int main()
 {
-    int n,fact=1;
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++)
-    {
-        fact*=i;
-    }
+    fact();
+}
+void fact()
+{
+    int fact=1;
+    int i,num;
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+        fact=fact*i;
     printf("Factorial value is: %d",fact);
-    return 0;
 }
 ```
 
