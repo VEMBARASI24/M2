@@ -97,30 +97,33 @@ Write a C program to perform addition and subtraction of two numbers using funct
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int add(int,int);
-int sub(int,int);
+#include <stdio.h>
+
+void add(int a, int b);
+void subtract(int a, int b);
+
 int main()
 {
-    int a,b,c,d;
-    scanf("%d%d",&a,&b);
-    c = add(a,b);
-    d = sub(a,b);
-    printf("Addition: %d\n",c);
-    printf("Subtraction: %d",d);
+    int num1, num2;
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+    add(num1, num2);
+    subtract(num1, num2);
+    return 0;
 }
-int add(int x,int y)
+
+void add(int a, int b)
 {
-    int z;
-    z = x + y;
-    return z;
+    int sum = a + b;
+    printf("Addition: %d\n", sum);
 }
-int sub(int x,int y)
+
+void subtract(int a, int b)
 {
-    int z;
-    z = x - y;
-    return z;
+    int diff = a - b;
+    printf("Subtraction: %d\n", diff);
 }
+
 ```
 
 
